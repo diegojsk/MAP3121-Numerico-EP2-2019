@@ -15,7 +15,8 @@ def runge_kutta(f_linha, f_0, h, t_0, t_f):
     t = t_0
     x = f_0
 
-    xs = np.empty((num_passos, 2))
+    xs = np.empty((num_passos, x.shape[0]))
+    ts = np.empty((num_passos))
     i = 0
 
     while num_passos > i:
@@ -28,10 +29,12 @@ def runge_kutta(f_linha, f_0, h, t_0, t_f):
         x = x + (k1 + 2*k2 + 2*k3 + k4)/6
         t = t + h
 
-        xs[i, :] = [x, t]
+        xs[i, :] = x
+        ts[i] = t
+
         i += 1
 
-    return xs
+    return xs, ts
 
 
 def euler(f_linha, f_0, h, t_0, t_f):
