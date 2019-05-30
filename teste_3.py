@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 if __name__ == "__main__":
 
-    n = 10
+    n = 5
     A = np.zeros((n, n))
 
     for i in range(n):
@@ -14,6 +14,8 @@ if __name__ == "__main__":
     for i in range(n-1):
         A[i, i+1] = 1
         A[i+1, i] = 1
+
+    print(A)
 
     def y(i):
         return i/(n + 1)

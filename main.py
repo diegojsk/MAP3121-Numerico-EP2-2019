@@ -36,20 +36,6 @@ def runge_kutta(f_linha, f_0, h, t_0, t_f):
 
     return xs, ts
 
-
-def euler(f_linha, f_0, h, t_0, t_f):
-    """
-    Aplica método de Euler para resolução de EDO
-        :param f_linha: Função na forma f'(t, x), a ser resolvida numericamente
-        :param f_0: Valor inicial da função
-        :param h: Tamanho do passo de integração
-        :param t_0: Instante inicial
-        :param t_f: Instante final
-    """
-    num_passos = (t_f - t_0)//h
-    raise NotImplementedError("Tem que terminar o EP!")
-
-
 def calc_E_pop(x, y, a, b, c, d):
     """
     Calcula o parâmetro energia definido no teste 3 na pág 9

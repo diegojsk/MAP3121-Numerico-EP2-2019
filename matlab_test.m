@@ -28,7 +28,7 @@ for i = 1:n
             A(i,j) = -2;
         elseif j == i + 1
                 A(i,j) = 1;
-        else 
+        else
             A(i,j) = 0;
         end
     end
@@ -41,7 +41,7 @@ X0 = zeros(n,1);
 for i = 1:n
     y = i/(n+1);
     X0(i) = sin(pi*y) + sin(n*pi*y);
-end    
+end
 
 X0
 
@@ -52,9 +52,8 @@ sistema3 = @(t,f) [(A(1,1)*x(1)+A(1,2)*x(2)+A(1,3)*x(3)+A(1,4)*x(4)+A(1,5)*x(5))
     (A(4,1)*x(1)+A(4,2)*x(2)+A(4,3)*x(3)+A(4,4)*x(4)+A(4,5)*x(5));
     (A(5,1)*x(1)+A(5,2)*x(2)+A(5,3)*x(3)+A(5,4)*x(4)+A(5,5)*x(5));
     ];
-tspan = 0:0.01:2;
-[t,x] = ode45(sistema3
-,tspan,X0);
+tspan = 0:0.01:10;
+[t,x] = ode45(sistema3,tspan,X0);
 figure(3)
 plot(t,x)
 
