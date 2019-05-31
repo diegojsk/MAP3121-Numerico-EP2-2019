@@ -32,6 +32,9 @@ if __name__ == "__main__":
 
     # Agora com u = 0
 
+    g = 9.8
+    l = 0.8
+    w = np.sqrt(g/l)
     u = 0
 
     output, ts = runge_kutta(F, X_0, 0.01 , 0, 5)
@@ -41,16 +44,9 @@ if __name__ == "__main__":
     ax1.set_title("Resolução pelo método de Runge-Kutta")
     plt.show()
 
-    output, ts = runge_kutta_automatico_pendulo(F, X_0, 0.01 , 0, 5,Emax, w)
+    output, ts = runge_kutta_automatico_pendulo(F, X_0, 0.2 , 0, 5, Emax, w)
 
     fig3, ax1 = plt.subplots()
     ax1.plot(ts, output)
-    ax1.set_title("Resolução pelo método de Runge-Kutta")
+    ax1.set_title("Resolução pelo método de Runge-Kutta com controle do passo")
     plt.show()
-
-
-
-
-
-
-

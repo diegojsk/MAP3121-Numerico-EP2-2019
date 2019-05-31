@@ -72,12 +72,9 @@ def runge_kutta_automatico_pendulo(f_linha, f_0, h, t_0, t_f, E, w):
 
     i = 0
 
-    while num_passos > i :
+    passo_adequado = True
 
-        if calc_E_pendulo(x[0],x[1],w) < E :
-            print("passo não adequado")
-            break
-
+    while num_passos > i and passo_adequado:
 
         k1 = h*f_linha(t, x)
         k2 = h*f_linha(t + 0.5*h, x + 0.5*k1)
@@ -91,6 +88,10 @@ def runge_kutta_automatico_pendulo(f_linha, f_0, h, t_0, t_f, E, w):
         ts[i] = t
 
         i += 1
+
+        if calc_E_pendulo(x[0],x[1],w) < E :
+            passo_adequado = False
+            print("Passo não adequado : ABORT !")
 
     return xs, ts
 
