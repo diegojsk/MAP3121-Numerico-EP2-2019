@@ -53,9 +53,9 @@ def calc_E_pendulo(theta, theta_ponto, omega):
     """
     return np.power(theta_ponto, 2)/2 - np.cos(theta)*np.power(omega, 2)
 
-def runge_kutta_automatico(f_linha, f_0, h, t_0, t_f, E, w):
+def runge_kutta_automatico_pendulo(f_linha, f_0, h, t_0, t_f, E, w):
     """
-    Aplica método de Runge-Kutta de ordem 4 para resolução de EDO com controle do passo do pendulo
+    Aplica método de Runge-Kutta de ordem 4 para resolução de EDO com controle do passo no pendulo
         :param f_linha: Função na forma f'(t, x), a ser resolvida numericamente
         :param f_0: Valor inicial da função
         :param h: Tamanho do passo de integração
@@ -75,7 +75,9 @@ def runge_kutta_automatico(f_linha, f_0, h, t_0, t_f, E, w):
     while num_passos > i :
 
         if calc_E_pendulo(x[0],x[1],w) < E :
-            raise ValueError ("Passo não adequado /n Try again")
+            print("passo não adequado")
+            break
+
 
         k1 = h*f_linha(t, x)
         k2 = h*f_linha(t + 0.5*h, x + 0.5*k1)

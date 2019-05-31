@@ -22,6 +22,7 @@ if __name__ == "__main__":
 
     X_0 = np.array([(5*pi)/2, 3])
 
+
     output, ts = runge_kutta(F, X_0, 0.01 , 0, 5)
 
     fig1, ax1 = plt.subplots()
@@ -29,7 +30,25 @@ if __name__ == "__main__":
     ax1.set_title("Resolução pelo método de Runge-Kutta")
     plt.show()
 
-    
+    # Agora com u = 0
+
+    u = 0
+
+    output, ts = runge_kutta(F, X_0, 0.01 , 0, 5)
+
+    fig2, ax1 = plt.subplots()
+    ax1.plot(ts, output)
+    ax1.set_title("Resolução pelo método de Runge-Kutta")
+    plt.show()
+
+    output, ts = runge_kutta_automatico_pendulo(F, X_0, 0.01 , 0, 5,Emax, w)
+
+    fig3, ax1 = plt.subplots()
+    ax1.plot(ts, output)
+    ax1.set_title("Resolução pelo método de Runge-Kutta")
+    plt.show()
+
+
 
 
 
