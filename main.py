@@ -3,7 +3,7 @@ import numpy as np
 
 def runge_kutta(f_linha, f_0, h, t_0, t_f):
     """
-    Aplica método de Runge-Kutta para resolução de EDO
+    Aplica método de Runge-Kutta de ordem 4 para resolução de EDO
         :param f_linha: Função na forma f'(t, x), a ser resolvida numericamente
         :param f_0: Valor inicial da função
         :param h: Tamanho do passo de integração
@@ -36,13 +36,16 @@ def runge_kutta(f_linha, f_0, h, t_0, t_f):
 
     return xs, ts
 
-def calc_E_pop(x, y, a, b, c, d):
+
+def calc_E(x, y, a, b, c, d):
     """
-    Calcula o parâmetro energia definido no teste 3 na pág 9
+    Calcula o parâmetro energia definido na seção 3.2
         :param x: Valor da função x(t) em um dado instante
         :param y: Valor da função y(t) em um dado instante
         :param a b c d: Parâmetros do caso analisado
     """
+    
+
     return np.power(x, c)*np.power(y, a)/np.exp(d*x + b*y)
 
 
