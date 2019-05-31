@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 if __name__ == "__main__":
 
-    n = 5
+    n = 10
     A = np.zeros((n, n))
 
     for i in range(n):

@@ -20,7 +20,7 @@ plot(t,x);
 %Teste 3
 
 n = 5;
-A = zeros(n,n)
+A = zeros(n,n);
 
 for i = 1:n
     for j = 1:n
@@ -34,7 +34,7 @@ for i = 1:n
     end
 end
 
-A
+A;
 
 X0 = zeros(n,1);
 
@@ -43,7 +43,7 @@ for i = 1:n
     X0(i) = sin(pi*y) + sin(n*pi*y);
 end
 
-X0
+X0;
 
  % lembrando n = 5
 sistema3 = @(t,x) [(A(1,1)*x(1)+A(1,2)*x(2)+A(1,3)*x(3)+A(1,4)*x(4)+A(1,5)*x(5));
@@ -52,7 +52,7 @@ sistema3 = @(t,x) [(A(1,1)*x(1)+A(1,2)*x(2)+A(1,3)*x(3)+A(1,4)*x(4)+A(1,5)*x(5))
     (A(4,1)*x(1)+A(4,2)*x(2)+A(4,3)*x(3)+A(4,4)*x(4)+A(4,5)*x(5));
     (A(5,1)*x(1)+A(5,2)*x(2)+A(5,3)*x(3)+A(5,4)*x(4)+A(5,5)*x(5));
     ];
-tspan = 0:0.01:10;
+tspan = 0:0.01:2;
 [t,x] = ode45(sistema3,tspan,X0);
 figure(3)
 plot(t,x);
@@ -60,12 +60,12 @@ plot(t,x);
 % Pêndulo
 g = 9.8;
 l = 0.8;
-w = g/l;
+w = sqrt(g/l);
 u = 2*w - 0.5;
 sistema = @(t,x) [(x(2)),
                   (-(w^2)*sin(x(1)) - u*x(2))]
-tspan = 0.0:0.01:5
-[t,x] = ode45(sistema,tspan,[(5*pi)/2, 3])
+tspan = 0.0:0.01:5;
+[t,x] = ode45(sistema,tspan,[(5*pi)/2, 3]);
 figure(4)
 plot(t,x)
 
