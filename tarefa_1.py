@@ -37,14 +37,14 @@ if __name__ == "__main__":
     w = np.sqrt(g/l)
     u = 0
 
-    output, ts = runge_kutta(F, X_0, 0.01 , 0, 5)
+    output, ts = runge_kutta(F, X_0, 0.1 , 0, 5)
 
     fig2, ax1 = plt.subplots()
     ax1.plot(ts, output)
     ax1.set_title("Resolução pelo método de Runge-Kutta")
     plt.show()
 
-    output, ts = runge_kutta_automatico_pendulo(F, X_0, 0.2 , 0, 5, Emax, w)
+    output, ts = runge_kutta_automatico_pendulo(F, X_0, 0.1 , 0, 5, Emax, w)
 
     fig3, ax1 = plt.subplots()
     ax1.plot(ts, output)

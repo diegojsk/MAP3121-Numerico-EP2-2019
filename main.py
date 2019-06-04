@@ -89,9 +89,11 @@ def runge_kutta_automatico_pendulo(f_linha, f_0, h, t_0, t_f, E, w):
 
         i += 1
 
-        if calc_E_pendulo(x[0],x[1],w) < E :
+        erro = calc_E_pendulo(x[0],x[1],w)
+
+        if erro < E :
             passo_adequado = False
-            print("Passo não adequado : ABORT !")
+            print("Passo não adequado  ABORT !!!!")
 
     return xs, ts
 
