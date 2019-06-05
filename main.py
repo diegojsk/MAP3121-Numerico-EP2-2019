@@ -44,12 +44,13 @@ def depuracao(f_linha, f_0, h, t_0, t_f, sol_exata):
 
     sol = sol_exata
 
-    for i in range(100):
+    for i in range(10):
         x1, t1 = runge_kutta(f_linha, f_0, h, t_0, t_f)
         x2, t2 = runge_kutta(f_linha, f_0, (h/2), t_0, t_f)
         for t in range(int(x1.shape[0])):
             p = np.log2((x1[t]-sol)/(x2[t]-sol))
             print(p)
+        h = h/2
 
     return None
 
