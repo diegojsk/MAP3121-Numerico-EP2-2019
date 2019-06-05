@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     output, ts = runge_kutta(F, X_0, 0.01, 0, 2)
 
-    '''
+
     fig1, ax1 = plt.subplots()
     ax1.plot(ts, output)
     ax1.set_title("Resolução pelo método de Runge-Kutta")
@@ -41,6 +41,6 @@ if __name__ == "__main__":
     plt.show()
 
     print(output)
-    '''
 
-    depuracao(F, X_0, 0.5, 0, 2, X_gab)
+
+    depuracao(F, X_0, 0.01, 0, 2, X_gab)

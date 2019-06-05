@@ -39,7 +39,14 @@ def runge_kutta(f_linha, f_0, h, t_0, t_f):
 
 def depuracao(f_linha, f_0, h, t_0, t_f, sol):
     """
-    Realiza a depuração indicada no
+    Realiza a depuração indicada na seção 2.3
+        :param f_linha: Função na forma f'(t, x), a ser resolvida numericamente
+        :param f_0: Valor inicial da função
+        :param h: Tamanho do passo de integração
+        :param t_0: Instante inicial
+        :param t_f: Instante final
+        :param sol: Solução exata do equação
+
     """
     h_0 = h
     for i in range(8):
