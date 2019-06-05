@@ -37,20 +37,19 @@ def runge_kutta(f_linha, f_0, h, t_0, t_f):
 
     return xs, ts
 
-def depuracao(f_linha, f_0, h, t_0, t_f, sol_exata):
+def depuracao(f_linha, f_0, h, t_0, t_f, sol):
     """
     Realiza a depuração indicada no
     """
-
-    sol = sol_exata
-
-    for i in range(10):
+    h_0 = h
+    for i in range(8):
+        h = h_0/np.power(2, i)
         x1, t1 = runge_kutta(f_linha, f_0, h, t_0, t_f)
-        x2, t2 = runge_kutta(f_linha, f_0, (h/2), t_0, t_f)
-        for t in range(int(x1.shape[0])):
-            p = np.log2((x1[t]-sol)/(x2[t]-sol))
-            print(p)
-        h = h/2
+        x2, t2 = runge_kutta(f_linha, f_0, h/2, t_0, t_f)
+        A = (x1.transpose()-sol(t1))
+        B = (x2.transpose()-sol(t2))
+        p = np.log2(abs(np.mean(A)/np.mean(B)))
+        print("{0:.3f}".format(p))
 
     return None
 
