@@ -45,3 +45,5 @@ if __name__ == "__main__":
     ax2.set_title("Aplicação da solução analítica")
 
     plt.show()
+
+    depuracao(F, X_0, 0.5, 0, 2, X_gab)

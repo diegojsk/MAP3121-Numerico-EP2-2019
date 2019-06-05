@@ -43,4 +43,4 @@ if __name__ == "__main__":
     print(output)
     '''
 
-    depuracao(F, X_0, 1, 0, 2, X_gab)
+    depuracao(F, X_0, 0.5, 0, 2, X_gab)
