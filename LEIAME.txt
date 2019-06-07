@@ -1,0 +1,9 @@
+Autores:
+
+## Estrutura dos arquivos
+
+ - __main.py__ - Biblioteca com as funções necessárias para a resolução do EP
+ - __tarefa_1.py__ - Execução do caso de pendulo
+ - __teste_1.py__ - Execução do teste 1
+ - __teste_2.py__ - Execução do teste 2
+ - __teste_3.py__ - Execução do teste 3

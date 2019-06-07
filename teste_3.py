@@ -15,8 +15,6 @@ if __name__ == "__main__":
         A[i, i+1] = 1
         A[i+1, i] = 1
 
-    print(A)
-
     def y(i):
         return i/(n + 1)
 
@@ -35,6 +33,8 @@ if __name__ == "__main__":
 
     output, ts = runge_kutta(F, X_0, 0.01, 0, 2)
 
+    depuracao(F, X_0, 0.5, 0, 2, X_gab)
+
     fig1, ax1 = plt.subplots()
     ax1.plot(ts, output)
     ax1.set_title("Resolução pelo método de Runge-Kutta")
@@ -45,5 +45,3 @@ if __name__ == "__main__":
     ax2.set_title("Aplicação da solução analítica")
 
     plt.show()
-
-    depuracao(F, X_0, 0.5, 0, 2, X_gab)

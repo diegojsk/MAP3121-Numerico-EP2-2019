@@ -2,7 +2,9 @@ import numpy as np
 from main import *
 import matplotlib.pyplot as plt
 
-
+h = 0.01
+ti = 0
+tf = 2
 def X_gab(t):
         X = np.array([
             np.exp(-t)*np.sin(t) + np.exp(-3*t)*np.cos(3*t),
@@ -26,8 +28,9 @@ if __name__ == "__main__":
     def F(t, x):
         return np.matmul(A, x)
 
-    output, ts = runge_kutta(F, X_0, 0.01, 0, 2)
+    output, ts = runge_kutta(F, X_0, h, ti, tf)
 
+    depuracao(F, X_0, h, ti, tf, X_gab)
 
     fig1, ax1 = plt.subplots()
     ax1.plot(ts, output)
@@ -39,8 +42,3 @@ if __name__ == "__main__":
     ax2.set_title("Aplicação da solução analítica")
 
     plt.show()
-
-    print(output)
-
-
-    depuracao(F, X_0, 0.01, 0, 2, X_gab)

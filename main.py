@@ -48,6 +48,7 @@ def depuracao(f_linha, f_0, h, t_0, t_f, sol):
         :param sol: Solução exata do equação
 
     """
+    print("Depurando a solução, analisando a convergencia de p")
     h_0 = h
     for i in range(8):
         h = h_0/np.power(2, i)
@@ -56,7 +57,7 @@ def depuracao(f_linha, f_0, h, t_0, t_f, sol):
         A = (x1.transpose()-sol(t1))
         B = (x2.transpose()-sol(t2))
         p = np.log2(abs(np.mean(A)/np.mean(B)))
-        print("{0:.3f}".format(p))
+        print("p = "+"{0:.3f}".format(p))
 
     return None
 
@@ -110,7 +111,9 @@ def runge_kutta_automatico_pendulo(f_linha, f_0, h, t_0, t_f, E, w):
 
         if erro < E :
             passo_adequado = False
-            print("Passo não adequado  ABORT !!!!")
+            print("Passo não adequado !!!")
+
+    print("Passo adequado !")
 
     return xs, ts
 
