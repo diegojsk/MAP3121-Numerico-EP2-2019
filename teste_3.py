@@ -2,8 +2,9 @@ from main import *
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 if __name__ == "__main__":
+
+    h = 0.05
 
     n = 5
     A = np.zeros((n, n))
@@ -31,9 +32,9 @@ if __name__ == "__main__":
     def F(t, x):
         return np.matmul(A, x)
 
-    output, ts = runge_kutta(F, X_0, 0.01, 0, 2)
+    output, ts = runge_kutta(F, X_0, h, 0, 2)
 
-    depuracao(F, X_0, 0.5, 0, 2, X_gab)
+    depuracao(F, X_0, h, 0, 2, X_gab)
 
     fig1, ax1 = plt.subplots()
     ax1.plot(ts, output)

@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
     print("Verificando se o passo está adequado ...")
 
-    output, ts = runge_kutta_automatico_pendulo(F, X_0, 0.1, 0, 5, Emax, w)
+    output, ts = runge_kutta_automatico_pendulo(F, X_0, 0.01, 0, 5, Emax, w)
 
     fig3, ax1 = plt.subplots()
     ax1.plot(ts, output)

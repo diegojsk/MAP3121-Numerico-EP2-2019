@@ -2,8 +2,14 @@
 
 # Numerico-EP2-2019
 
+Exercício programa 2 para a disciplina MAP3121 - Métodos Numéricos e Aplicações Poli - USP - 2019
+
+Engenharia Mecatrônica
+
+Diego Jun Sato Kurashima - 10274231
+Felipe Gomes de Melo D'Elia - 10340624
+
 [Link](https://www.ime.usp.br/~map3121/2019/map3121/programas/EP2-edos.pdf) do enunciado
 
-[Link](https://docs.google.com/document/d/1jWOzyrqr6LqHKIBYdveuokhrVbu78ovF0bKY51k4Hr4/edit#) do relatório EP2
 
 

@@ -50,7 +50,7 @@ def depuracao(f_linha, f_0, h, t_0, t_f, sol):
     """
     print("Depurando a solução, analisando a convergencia de p")
     h_0 = h
-    for i in range(8):
+    for i in range(10):
         h = h_0/np.power(2, i)
         x1, t1 = runge_kutta(f_linha, f_0, h, t_0, t_f)
         x2, t2 = runge_kutta(f_linha, f_0, h/2, t_0, t_f)
