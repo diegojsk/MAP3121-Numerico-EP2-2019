@@ -4,6 +4,8 @@
 
 Exercício programa 2 para a disciplina MAP3121 - Métodos Numéricos e Aplicações Poli - USP - 2019
 
+Nesse ano em específico do curso o EP2 foi um exercício opcional caso a nota do EP1 fosse superior à 5.
+
 Engenharia Mecatrônica
 
 Diego Jun Sato Kurashima - 10274231
@@ -11,6 +13,3 @@ Diego Jun Sato Kurashima - 10274231
 Felipe Gomes de Melo D'Elia - 10340624
 
 [Link](https://www.ime.usp.br/~map3121/2019/map3121/programas/EP2-edos.pdf) do enunciado
-
-
-
