@@ -4,7 +4,7 @@
 
 Exercício programa 2 para a disciplina MAP3121 - Métodos Numéricos e Aplicações Poli - USP - 2019
 
-Nesse ano em específico do curso o EP2 foi um exercício opcional caso a nota do EP1 fosse superior à 5.
+Nesse ano em específico do curso o EP2 foi um exercício opcional caso a nota do EP1 fosse superior à 5. Esse trabalho não foi entregue para avaliação.
 
 Engenharia Mecatrônica
 
