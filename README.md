@@ -9,6 +9,6 @@ Nesse ano em específico do curso o EP2 foi um exercício opcional caso a nota d
 Engenharia Mecatrônica
 
 Diego Jun Sato Kurashima  
-Felipe Gomes de Melo D'Elia  
+Felipe Gomes de Melo
 
 [Link](https://www.ime.usp.br/~map3121/2019/map3121/programas/EP2-edos.pdf) do enunciado
